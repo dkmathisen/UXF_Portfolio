@@ -1,0 +1,149 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #faf7f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(bakgrund2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+nav,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background-color: #d4a373;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.projekt-card button {
+  align-self: center;
+  width: 100%;
+  max-width: 200px;
+}
+
+button:hover {
+  background-color: #b5834f;
+  transform: scale(1.05);
+}
+
+a:hover {
+  color: #555;
+}
+
+.nav-links,
+.contact-links,
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.projekt {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.projekt-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.projekt-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projekt-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.produktbild {
+  height: 100px;
+  border-radius: 5px;
+}
+
+.about,
+.social,
+.contact {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 0;
+  width: 300px;
+}
+
+@media (min-width: 768px) {
+  nav,
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contact-links,
+  .social-links {
+    gap: 0.5rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .projekt-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .projekt-card {
+    flex: 1 1 calc(33.333% - 2rem);
+    max-width: 300px;
+  }
+}
